@@ -19,6 +19,9 @@ struct duckyfs_file {
     char name[MAX_NAME_LEN];
     uint32_t size;
     uint32_t used; // 0 = empty slot, 1 = active file
+    uint32_t mtime;
+    uint32_t ctime;
+    uint32_t atime;
     char data[BLOCK_SIZE]; // Simple inline data block per file
 };
 
